@@ -6,7 +6,7 @@ copy_file "#{__dir__}/webpack.config.js", "webpack.config.js"
 run "yarn add --dev webpack webpack-cli@4.10.0"
 
 say "Add build script"
-build_script = "webpack --config webpack.config.js"
+build_script = "webpack --config ./config/webpack/webpack.config.js"
 say %(Add "scripts": { "build": "#{build_script}" } to your package.json), :green
 
 # case `npx -v`.to_f
